@@ -22,7 +22,8 @@ module.exports = class Playlist {
      * @param songs : Song[] of songs
      */
     constructor(title, songs) {
-        throw new Error();
+        this.#title = title;
+        this.#songs = songs;
     }
 
     get title(){
