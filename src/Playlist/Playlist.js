@@ -7,7 +7,9 @@
 
 "use strict";
 
+// deux fois la même erreur ?
 const EmptySongsListException = require("./EmptySongsListException.js");
+const EmptyListOfSongsException = require("./EmptySongsListException.js");
 
 module.exports = class Playlist {
 
@@ -67,6 +69,9 @@ module.exports = class Playlist {
      * @exception Throws EmptySongsListException if the newListOfSongs is empty
      */
     initSongs(newListOfSongs){
+        if(newListOfSongs == null){
+            throw new EmptyListOfSongsException();
+        }
         this.#songs = [];
         this.addSongs(newListOfSongs);
     }
