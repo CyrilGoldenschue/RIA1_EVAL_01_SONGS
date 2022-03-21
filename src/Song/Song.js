@@ -61,6 +61,9 @@ module.exports = class Song {
      * @exception Throws TooShortLengthException if the song's length do not reach 10 seconds.
      */
     set length(value){
+        if(value < 10){
+            throw new TooShortSongException();
+        }
         this.#length = value;
     }
     //endregion public methods
