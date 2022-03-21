@@ -27,7 +27,7 @@ module.exports = class Song {
      */
     constructor(title, length, artists) {
         this.#title = title;
-        this.#length = length;
+        this.length = length;
         this.#artists = artists;
     }
 
@@ -61,7 +61,7 @@ module.exports = class Song {
      * @exception Throws TooShortLengthException if the song's length do not reach 10 seconds.
      */
     set length(value){
-        throw new Error();
+        this.#length = value;
     }
     //endregion public methods
 
