@@ -27,7 +27,7 @@ module.exports = class Playlist {
     }
 
     get title(){
-        throw new Error();
+        return this.#title;
     }
 
     /**
@@ -35,7 +35,11 @@ module.exports = class Playlist {
      *        Sum of all songs length.
      */
     get length(){
-        throw new Error();
+        let sum = 0;
+        this.#songs.forEach((song) => {
+            sum += song.length;
+        })
+        return sum;
     }
 
     /**
@@ -43,7 +47,7 @@ module.exports = class Playlist {
      * @returns songs
      */
     get songs(){
-        throw new Error();
+        return this.#songs;
     }
 
     /**
