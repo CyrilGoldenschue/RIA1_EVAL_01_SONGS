@@ -44,7 +44,6 @@ test('toString_DateOfBirthNotProvided_ThrowException', () => {
     let expectedFirstname = "Firstname";
     let expectedLastname = "Lastname";
     let artist = new Artist(expectedFirstname, expectedLastname);
-    let expectedToString = expectedFirstname + expectedLastname;
 
     //when
     expect(() => artist.toString(true)).toThrow(DateOfBirthException);
