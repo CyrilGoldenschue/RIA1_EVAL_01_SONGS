@@ -15,7 +15,7 @@ module.exports = class Playlist {
 
     //region private attributes
     #title;
-    #songs;
+    #songs = [];
     //endregion private attributes
 
     //region public methods
@@ -25,7 +25,7 @@ module.exports = class Playlist {
      */
     constructor(title, songs) {
         this.#title = title;
-        this.#songs = songs;
+        this.addSongs(songs);
     }
 
     get title(){
